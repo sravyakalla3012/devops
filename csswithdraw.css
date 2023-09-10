@@ -1,0 +1,67 @@
+
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110lvh;
+        background-color: #f0f0f0;
+        background-image: url("back.png" );
+        background-size: cover;
+        background-position: 30%;
+    }
+    .atm-container {
+        padding: 15px;
+        border: 3px solid rgb(51, 3,65);
+        border-radius:30px;
+        background-color:rgb(51, 3, 65) ;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        text-align: left;
+
+    }
+    .input-group {
+       margin: 10px 0;
+       color: #fff;
+    }
+    .input-group td {
+        width: 100%;
+        padding: 8px;
+        color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    .container{
+    position: relative;
+    }
+    .bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    }
+    .bottom-left {
+    position: absolute;
+    bottom: 0;
+    left : 0;
+    padding: 10px;
+    }
+    
+    .btn {
+        background-color: #7251eb;
+        color: #fff;
+        font-weight: bolder;
+        border-color: black;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .text{
+        color:white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+    }

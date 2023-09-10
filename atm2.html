@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="csswithdraw.css">
+        <title> ATM SYSTEM</title>
+       
+    </head>
+    <body>
+        <form>
+                        <div class="container">
+                            <div class="table">
+                                <div class="atm-container">
+                                    <div class="input-group">
+                                    <h2>Transaction</h2>
+                                </div>
+                                    <div id="account-info" style="display: none;">
+                                    </div>
+                                    <div class="input-group" >
+                                    <tr>
+                                        <td>Balance amount : Rs. 10,000 </td><br>
+                                    </tr>
+                                    </div>
+                                    <div class="input-group">
+                                    <tr>
+                                        <td> Withdraw-amount : </td>
+                                        <td>
+                                        <div id =" withdrawButton" name = " Withdraw-amount"> <br>
+                                            <input type="integer" name="amount">
+                                            <!--<option>Rs. 100</option>
+                                            <option>Rs. 200</option>
+                                            <option>Rs. 300</option>
+                                            <option>Rs. 400</option>
+                                            <option>Rs. 500</option>
+                                            <option>Rs. 600</option>
+                                            <option>Rs. 700</option>
+                                                <option>Rs. 800</option>
+                                                <option>Rs. 900</option>
+                                                <option>Rs. 1000</option>
+                                            </select>-->
+                                            </td>
+                                        </tr>
+                                        </div>
+                                        <div class="input-group">
+                                        <tr>
+                                            <td><br> <button  class="btn" type="submit"  id=" withdrawButton " onclick="fun()">Submit</button>
+                                            </td>
+                                        </tr>
+                                        </div>
+                                        <div class="text">
+                                            <td><p id="displayText" style="display: none;" class="text">THANK YOU!!! YOUR MONEY IS CREDITED SUCCESSFULLY </p></td>
+                                        </div>
+                                    
+                            </div>
+                            </div>
+                </div>
+         </form>
+    
+
+
+<script>
+    function fun(){
+        alert("withdraw successful!");
+    }
+    
+
+   /* var withdrawalAmount = document.getElementById("withdraw-amount");
+    console.log(withdrawalAmount);
+
+// Check if the withdrawal amount is valid
+if (isNaN(withdrawalAmount) || withdrawalAmount <= 0 || withdrawalAmount>1000) {
+    console.log("Invalid withdrawal amount. Please enter a valid amount.");
+} else {
+    // Perform withdrawal logic here (e.g., updating account balance)
+    // For this example, let's just print the withdrawal amount
+    console.log("Withdrawal successful. Amount withdrawn: $" + withdrawalAmount.toFixed(2));
+}*/
+
+    /*const accountInfo = document.getElementById('account-info');
+    const balanceElement = document.getElementById('balance');
+    const withdrawAmount = document.getElementById('withdraw-amount');
+    const withdrawButton = document.getElementById('withdraw-btn');
+    const Notification =  document.getElementById('Notification ');
+
+    // Simulated account data
+    const accountData = {
+        accountNumber: '123456789',
+        pin: '1234',
+        balance: 1000
+    };*/
+
+      /*  // Get a reference to the button element
+        const withdrawButton = document.getElementById("withdrawButton");
+
+        // Attach a click event listener to the button
+        withdrawButton.addEventListener("click", function() {
+            // Perform the withdrawal logic here
+
+            // Display an alert message
+            alert("Withdrawal successful!");
+        });
+
+
+               /* if (withdrawAmount <= 0  ) {
+            alert('Please enter a valid withdrawal amount.');
+        } else if (withdrawAmount > accountData.balance) {
+            alert('Insufficient balance.');
+        } else {
+            accountData.balance -= withdrawAmount;
+            balanceElement.textContent = `Balance: $${accountData.balance}`;
+            alert(`Successfully withdrawn $${withdrawAmount}. New balance: $${accountData.balance}`);
+        }
+          alert("THANK YOU");
+        });  
+
+        if (
+            accountInput.value === accountData.accountNumber &&
+            pinInput.value === accountData.pin
+        ) {
+            // Successful login
+            accountInput.value = '';
+            pinInput.value = '';
+            accountInfo.style.display = 'block';
+            balanceElement.textContent = `Balance: $${accountData.balance}`;
+        } else {
+            alert('Invalid account number or PIN. Please try again.');
+        }
+    });
+
+    Notification.addEventListener('click', function () {
+        const withdrawAmount = parseFloat(withdrawAmountInput.value);
+
+        if (withdrawAmount <= 0 && withdrawAmount >1000 ) {
+            alert('Please enter a valid withdrawal amount.');
+        } else if (withdrawAmount > accountData.balance) {
+            alert('Insufficient balance.');
+        } else {
+            accountData.balance -= withdrawAmount;
+            balanceElement.textContent = `Balance: $${accountData.balance}`;
+            alert(`Successfully withdrawn $${withdrawAmount}. New balance: $${accountData.balance}`);
+        }
+
+        withdrawAmountInput.value = '';
+    });*/
+</script>
+</body>
+</html>

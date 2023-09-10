@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .atm-container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .input-group {
+            margin: 10px 0;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="atm-container">
+        <h1>ATM System</h1>
+        <form id="atm-form">
+            <div class="input-group">
+                <label for="account">Account Number:</label>
+                <input type="text" id="account" name="account" required>
+            </div>
+            <div class="input-group">
+                <label for="pin">PIN:</label>
+                <input type="password" id="pin" name="pin" required>
+            </div>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+        <div id="account-info" style="display: none;">
+            <h2>Account Information</h2>
+            <p id="balance">Balance: $0</p>
+            <div class="input-group">
+                <label for="withdraw-amount">Withdraw Amount:</label>
+                <input type="number" id="withdraw-amount" name="withdraw-amount" required>
+            </div>
+            <button class="btn" id="withdraw-btn">Withdraw</button>
+        </div>
+    </div>
+
+    <script>
+        const atmForm = document.getElementById('atm-form');
+        const accountInfo = document.getElementById('account-info');
+        const balanceElement = document.getElementById('balance');
+        const withdrawAmountInput = document.getElementById('withdraw-amount');
+        const withdrawButton = document.getElementById('withdraw-btn');
+
+        // Simulated account data
+        const accountData = {
+            accountNumber: '123456789',
+            pin: '1234',
+            balance: 1000
+        };
+
+        atmForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const accountInput = document.getElementById('account');
+            const pinInput = document.getElementById('pin');
+
+            if (
+                accountInput.value === accountData.accountNumber &&
+                pinInput.value === accountData.pin
+            ) {
+                // Successful login
+                accountInput.value = '';
+                pinInput.value = '';
+                accountInfo.style.display = 'block';
+                balanceElement.textContent = `Balance: $${accountData.balance}`;
+            } else {
+                alert('Invalid account number or PIN. Please try again.');
+            }
+        });
+
+        withdrawButton.addEventListener('click', function () {
+            const withdrawAmount = parseFloat(withdrawAmountInput.value);
+
+            if (withdrawAmount <= 0) {
+                alert('Please enter a valid withdrawal amount.');
+            } else if (withdrawAmount > accountData.balance) {
+                alert('Insufficient balance.');
+            } else {
+                accountData.balance -= withdrawAmount;
+                balanceElement.textContent = `Balance: $${accountData.balance}`;
+                alert(`Successfully withdrawn $${withdrawAmount}. New balance: $${accountData.balance}`);
+            }
+
+            withdrawAmountInput.value = '';
+        });
+    </script>
+</body>
+</html>

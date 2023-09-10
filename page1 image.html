@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM SYSTEM</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-position: center;
+            background-image: url("pageintro1.png");
+            background-size: cover;
+        }
+        .container {
+            position: relative;
+            width: 1250px; 
+            height: 600px; 
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 10px;
+        }
+        .btn {
+                background-color:   #58459e ;
+                color: black;
+                font-weight: bold;
+                border-color: black;
+                padding : 10px 20px ;
+                cursor: pointer;
+                color: white;
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+    <form action="atm.html" method="get">
+    <div class="container">
+        <p class="bottom-right">
+            <button class="btn" type="submit"> NEXT >
+            </button> </p>
+    </div>
+    </body>
+</body>
+</html>
+  
+     <script>
+      document.getElementById("btn").addEventListener("click", function() {
+    alert("Button clicked!");
+  });
+      </script>
